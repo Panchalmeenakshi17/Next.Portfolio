@@ -22,7 +22,7 @@ export const author = {
 export const seoData = {
   title: 'Meenakshi Panchal | Full Stack Developer',
   description:
-    'Meenakshi Panchal is a full stack developer who specializes in building exceptional websites and interfaces of Mobile Apps.',
+    'Meenakshi Panchal is a full stack developer who specialize in building exceptional websites and interfaces of Mobile Apps.',
   author: author.name,
   image:
     'https://i.postimg.cc/ZKBZTwPf/Screenshot-2024-05-30-011924.png',
