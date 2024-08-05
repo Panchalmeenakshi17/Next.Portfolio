@@ -1,6 +1,8 @@
 'use client'
 
 import React, { useState } from 'react';
+import Image from 'next/image';
+
 
 const certificates = [
   {
@@ -60,7 +62,7 @@ const Cert: React.FC = () => {
             rel="noopener noreferrer"
             className=""
           >
-            <img
+            <Image
               src={cert.image}
               alt={`Certificate ${cert.id}`}
               className="h-[300px] w-full object-cover  "
@@ -79,7 +81,7 @@ const Cert: React.FC = () => {
                 rel="noopener noreferrer"
                 className="block"
               >
-                <img
+                <Image
                   src={cert.image}
                   alt={`Certificate ${cert.id}`}
                   className="w-full h-[300px] object-cover"
