@@ -8,37 +8,51 @@ const certificates = [
   {
     id: 1,
     image: 'https://i.postimg.cc/Z5MFfTcT/Screenshot-2024-08-05-161759.png',
-    link: 'https://www.coursera.org/account/accomplishments/records/ZMAY4FC9HWDC'
+    link: 'https://www.coursera.org/account/accomplishments/records/ZMAY4FC9HWDC',
+    width: 500,  // Specify width
+    height: 300
   },
   {
     id: 3,
     image: 'https://i.postimg.cc/fTkV8Yg9/Screenshot-2024-08-05-162029.png',
-    link: 'https://i.postimg.cc/fTkV8Yg9/Screenshot-2024-08-05-162029.png'
+    link: 'https://i.postimg.cc/fTkV8Yg9/Screenshot-2024-08-05-162029.png',
+    width: 500,  // Specify width
+    height: 300
   },
   {
     id: 4,
     image: 'https://i.postimg.cc/PqMfXqRH/Screenshot-2024-08-05-162732.png',
-    link: 'https://unstop.com/certificate-preview/bc4c74bb-cbca-403d-8c31-80541be99b91?utm_campaign='
+    link: 'https://unstop.com/certificate-preview/bc4c74bb-cbca-403d-8c31-80541be99b91?utm_campaign=',
+    width: 500,  // Specify width
+    height: 300
   },
   {
     id: 2,
     image: 'https://i.postimg.cc/Zn5WtNbX/Screenshot-2024-08-05-161924.png',
-    link: 'https://coursera.org/share/8e21b92f4c4751e54b776741ab9e276a'
+    link: 'https://coursera.org/share/8e21b92f4c4751e54b776741ab9e276a',
+    width: 500,  // Specify width
+    height: 300
   },
   {
     id: 5,
     image: 'https://i.postimg.cc/fTkV8Yg9/Screenshot-2024-08-05-162029.png',
-    link: 'https://i.postimg.cc/fTkV8Yg9/Screenshot-2024-08-05-162029.png'
+    link: 'https://i.postimg.cc/fTkV8Yg9/Screenshot-2024-08-05-162029.png',
+    width: 500,  // Specify width
+    height: 300
   },
   {
     id: 6,
     image: 'https://i.postimg.cc/25CbFgpz/Screenshot-2024-08-05-163449.png',
-    link: 'https://i.postimg.cc/25CbFgpz/Screenshot-2024-08-05-163449.png'
+    link: 'https://i.postimg.cc/25CbFgpz/Screenshot-2024-08-05-163449.png',
+    width: 500,  // Specify width
+    height: 300
   },
   {
     id: 7,
     image: 'https://i.postimg.cc/0ysdFWg4/Screenshot-2024-08-05-165740.png',
-    link: 'https://i.postimg.cc/0ysdFWg4/Screenshot-2024-08-05-165740.png'
+    link: 'https://i.postimg.cc/0ysdFWg4/Screenshot-2024-08-05-165740.png',
+    width: 500,  // Specify width
+    height: 300
   }
   // Add more certificates as needed
 ];
@@ -53,7 +67,7 @@ const Cert: React.FC = () => {
   return (
     <div className=' mt-16'>
       <h1 className='text-center text-4xl'>Certifications and Awards</h1>
-      <div className="flex grid grid-cols-2 gap-4 overflow-hidden mt-10 w-full">
+      <div className="md:flex md:grid md:grid-cols-2 gap-4 overflow-hidden mt-10 w-full">
         {certificates.slice(0, 2).map((cert) => (
           <a
             key={cert.id}
@@ -65,14 +79,17 @@ const Cert: React.FC = () => {
             <Image
               src={cert.image}
               alt={`Certificate ${cert.id}`}
-              className="h-[300px] w-full object-cover  "
+              className="h-[300px] w-full md:mt-0 mt-4 object-cover  "
+              width={cert.width}
+              height={cert.height}
+              // className="object-cover"
             />
           </a>
         ))}
       </div>
       {showMore ? (
         <div>
-          <div className="mt-4 grid grid-cols-2 gap-4">
+          <div className="mt-4 md:grid md:grid-cols-2 gap-4">
             {certificates.slice(2, 7).map((cert) => (
               <a
                 key={cert.id}
@@ -84,7 +101,10 @@ const Cert: React.FC = () => {
                 <Image
                   src={cert.image}
                   alt={`Certificate ${cert.id}`}
-                  className="w-full h-[300px] object-cover"
+                  className="w-full h-[300px] md:mt-0 mt-4 object-cover"
+                  width={cert.width}
+                  height={cert.height}
+                  // className="object-cover"
                 />
               </a>
             ))}
